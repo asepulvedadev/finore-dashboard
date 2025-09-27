@@ -14,9 +14,9 @@ export class UserService extends BaseService<UserType> {
    * @param email - Email del usuario
    * @returns Promise con datos del usuario
    */
-  async findByEmail(email: string): Promise<{ data: UserType | null; error: any }> {
+  async findByEmail(email: string): Promise<{ data: UserType | null; error: unknown }> {
     try {
-      const { data, error } = await (this.client as any)
+      const { data, error } = await this.client
         .from('users')
         .select('*')
         .eq('email', email)
@@ -35,7 +35,7 @@ export class UserService extends BaseService<UserType> {
    * @param userData - Datos del usuario
    * @returns Promise con usuario creado
    */
-  async createUser(userData: InsertUserType): Promise<{ data: UserType | null; error: any }> {
+  async createUser(userData: InsertUserType): Promise<{ data: UserType | null; error: unknown }> {
     return this.create(userData);
   }
 
@@ -46,7 +46,7 @@ export class UserService extends BaseService<UserType> {
    * @param updates - Datos a actualizar
    * @returns Promise con usuario actualizado
    */
-  async updateProfile(id: string, updates: UpdateUserType): Promise<{ data: UserType | null; error: any }> {
+  async updateProfile(id: string, updates: UpdateUserType): Promise<{ data: UserType | null; error: unknown }> {
     return this.update(id, updates);
   }
 }

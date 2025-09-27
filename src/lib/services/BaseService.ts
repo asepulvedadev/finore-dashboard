@@ -1,12 +1,12 @@
-import { SupabaseClient } from '@supabase/supabase-js';
+import { SupabaseClient, PostgrestError } from '@supabase/supabase-js';
 import { Database } from '@/types/supabase';
 
 type SupabaseResponse<T> = {
   data: T | null;
-  error: any;
+  error: unknown;
 };
 
-export abstract class BaseService<T = Record<string, any>> {
+export abstract class BaseService<T = Record<string, unknown>> {
   protected client: SupabaseClient<Database>;
   protected tableName: string;
 
@@ -122,7 +122,7 @@ export abstract class BaseService<T = Record<string, any>> {
    * @param id - ID del registro a eliminar
    * @returns Promise con resultado de la operación
    */
-  async delete(id: string): Promise<{ success: boolean; error: any }> {
+  async delete(id: string): Promise<{ success: boolean; error: unknown }> {
     try {
       const { error } = await this.client
         .from(this.tableName)
