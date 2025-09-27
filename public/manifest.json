@@ -1,19 +1,84 @@
 {
   "name": "Finore Dashboard",
   "short_name": "Finore",
-  "description": "Dashboard moderno con autenticación completa",
+  "description": "Dashboard moderno con autenticación completa y Progressive Web App",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3b82f6",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "scope": "/",
   "lang": "es",
-  "categories": ["business", "productivity"],
+  "dir": "ltr",
+  "categories": ["business", "productivity", "utilities"],
+  "prefer_related_applications": false,
+  "iarc_rating_id": "",
+  "related_applications": [],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [],
+  "file_handlers": [],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
   "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"
     },
@@ -36,6 +101,18 @@
           "sizes": "192x192"
         }
       ]
+    },
+    {
+      "name": "Perfil",
+      "short_name": "Perfil",
+      "description": "Ver y editar perfil",
+      "url": "/profile",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ],
   "screenshots": [
@@ -45,6 +122,13 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Vista móvil del dashboard"
+    },
+    {
+      "src": "/screenshot-tablet.png",
+      "sizes": "768x1024",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vista tablet del dashboard"
     },
     {
       "src": "/screenshot-desktop.png",

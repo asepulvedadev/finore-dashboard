@@ -150,10 +150,52 @@ SUPABASE_SERVICE_ROLE_KEY=your-production-service-role-key
 ✅ Providers de React Query
 ✅ Políticas RLS configuradas
 
-## 8. Próximos Pasos
+## 8. Instalación PWA
+
+### Cómo Instalar la Aplicación
+
+La aplicación está configurada como Progressive Web App (PWA) y se puede instalar en dispositivos móviles y de escritorio.
+
+#### En Android/Chrome:
+1. Abre la aplicación en Chrome
+2. Toca el menú (tres puntos) en la esquina superior derecha
+3. Selecciona "Agregar a pantalla de inicio" o "Instalar aplicación"
+4. Confirma la instalación
+
+#### En iOS/Safari:
+1. Abre la aplicación en Safari
+2. Toca el botón compartir (cuadrado con flecha hacia arriba)
+3. Selecciona "Agregar a pantalla de inicio"
+4. Confirma la instalación
+
+#### En Desktop:
+1. En Chrome/Edge: Haz clic en el botón de instalación en la barra de direcciones
+2. En Firefox: El botón de instalación aparecerá automáticamente
+3. Sigue las instrucciones para instalar
+
+### Características PWA
+
+- ✅ **Instalación nativa** - Se comporta como una app nativa
+- ✅ **Offline-first** - Funciona sin conexión a internet
+- ✅ **Actualizaciones automáticas** - Se actualiza automáticamente
+- ✅ **Notificaciones push** - Soporte preparado para futuras notificaciones
+- ✅ **Cache inteligente** - Almacena recursos para carga rápida
+- ✅ **Responsive** - Se adapta a cualquier tamaño de pantalla
+
+### Verificación de Instalación
+
+Después de instalar, verás:
+- Un icono en tu pantalla de inicio
+- La app se abre en modo standalone (sin barra de navegación)
+- Funciona offline
+- Indicador de estado PWA en la esquina superior derecha (en desarrollo)
+
+## 9. Próximos Pasos
 
 - Implementar recuperación de contraseña
 - Agregar autenticación con proveedores sociales (Google, GitHub, etc.)
 - Crear sistema de roles y permisos
 - Implementar verificación de email
 - Agregar más tablas y relaciones según necesites
+- Configurar notificaciones push
+- Implementar sincronización en segundo plano

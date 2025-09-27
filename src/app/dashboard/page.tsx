@@ -1,6 +1,8 @@
 'use client';
 
 import { useAuth } from '@/hooks/useAuth';
+import { InstallPrompt } from '@/components/pwa/InstallPrompt';
+import { PWAStatus } from '@/components/pwa/PWAStatus';
 
 /**
  * Página del dashboard - Mobile First & Responsive
@@ -214,6 +216,12 @@ export default function DashboardPage() {
           </div>
         </div>
       </main>
+
+      {/* PWA Install Prompt */}
+      <InstallPrompt />
+
+      {/* PWA Status Indicator */}
+      <PWAStatus />
     </div>
   );
 }
