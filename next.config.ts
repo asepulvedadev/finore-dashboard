@@ -2,11 +2,9 @@ import type { NextConfig } from "next";
 import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
-  // Configuración experimental para turbopack
-  experimental: {
-    turbo: {
-      // Configuración adicional si es necesaria
-    },
+  // Configuración de turbopack
+  turbopack: {
+    // Configuración adicional si es necesaria
   },
   // Configuración de imágenes
   images: {
